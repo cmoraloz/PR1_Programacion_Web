@@ -45,8 +45,12 @@ class FilmList {
         this.films = this.films.filtr(film => film.id !== filmId); //Filtramos las películas que no coincidan por su ID.
     }
 
+//2.3 Método para mostrar la lista de películas.
+    
     showList() {
-        
+        this.films.forEach(film => {
+            console.log(`Título: ${film.title}, Fecha de lanzamiento: ${film.release_date}`); //Recorremos la lista con un forEach y mostramos el título y la fecha de lanzamiento de cada película.
+        });
     }
 
     addMultipleFilms = (...films) => {
