@@ -107,11 +107,34 @@ class FilmList {
 
 //Pruebas de funcionamiento.
 
-//1. Creamos películas de ejemplo.
+//Creamos películas de ejemplo.
+
 const film1 = new Film(1, "Titanic", "Un romance trágico a bordo del barco Titanic", 98, "titanic.jpg", "1997-12-19", 7.8, 30000, [18, 10749]);
 const film2 = new Film(2, "El padrino", "La historia de una familia mafiosa y su lucha por el poder", 99, "godfather.jpg", "1972-03-24", 9.2, 40000, [18, 80]);
 const film3 = new Film(3, "El club de la lucha", "Un hombre se une a un club de lucha clandestino", 95, "fightclub.jpg", "1999-10-15", 8.8, 25000, [18, 53]);
 
+//Creamos una lista de películas y añadimos las películas de ejemplo.
 
+const myFilmList = new FilmList();
+myFilmList.addFilm(film1);
+myFilmList.addFilm(film2);
+myFilmList.addFilm(film3);
+
+//1. Mostramos la lista de películas.
+
+console.log("Lista de películas:");
+myFilmList.showList();
+
+//2. Buscamos una película por su ID.
+
+console.log("Películas encontradas por ID:" myFilmList.findFilmById(1));
+
+//3. Obtenemos el género más común.
+
+console.log("Género más común:" myFilmList.getMostCommonGenre());
+
+//4. Obteemos los títulos de las películas populares con un promedio de votos mayor o igual a 8.5.
+
+console.log("Títulos de películas populares:", myFilmList.getPopularFilmTitles(8.5));
 
 
