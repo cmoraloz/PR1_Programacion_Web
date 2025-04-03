@@ -133,8 +133,16 @@ console.log("Películas encontradas por ID:" myFilmList.findFilmById(1));
 
 console.log("Género más común:" myFilmList.getMostCommonGenre());
 
-//4. Obteemos los títulos de las películas populares con un promedio de votos mayor o igual a 8.5.
+//4. Obtenemos los títulos de las películas populares con un promedio de votos mayor o igual a 8.5.
 
 console.log("Títulos de películas populares:", myFilmList.getPopularFilmTitles(8.5));
 
+//5. Filtramos películas por fecha de lanzamiento.
 
+console.log("Películas lanzadas entre 1990 y 2000:", myFilmList.GgetFilmsByDateRange(""1990-01-01", "2000-12-31"));
+
+//6. Ordenamos películas por popularidad.
+
+console.log("Películas ordenadas por popularidad:");
+myFilmList.sortFilmsByPopularity();
+myFilmList.showList();
