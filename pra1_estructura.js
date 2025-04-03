@@ -87,13 +87,13 @@ class FilmList {
 //5 Uso de reduce para obtener el género más común.
     
     getMostCommonGenre() {
-       const genreCount = this.film.reduce((acc, film) => {
-           film.genre.ids.forEach(genre => {
-               acc[genre] = (acc[genre] || 0) + 1;
+       const genreCount = this.film.reduce((acc, film) => { //Usamos reduce para contar las veces que aparece cada género.
+           film.genre.ids.forEach(genre => { //Recorremos los géneros de cada película con un forEach.
+               acc[genre] = (acc[genre] || 0) + 1; //Si el género ya existe, aumentamos su contador. Si no existe, lo inicializamos a 1.
            });
-           return acc;
+           return acc; //Devolvemos el acumulador.
        }, {});
-        return Object.keys(genreCount).reduce((a, b) => genreCount[a] > genreCount[b] ? a:b);
+        return Object.keys(genreCount).reduce((a, b) => genreCount[a] > genreCount[b] ? a:b); //Devolvemos el género más común comparando los contadores de cada género.
     }
 
     getPopularFilmTitles() {
