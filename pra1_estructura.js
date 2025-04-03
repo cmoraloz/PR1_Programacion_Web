@@ -83,9 +83,17 @@ class FilmList {
         if (this.film[index]id === filmID) return this.film[index]; //Recorremos el array y, si encontramos la película, devolvemos el objeto de la película.
         return this.findFilmById(filmID, index + a); //Llamamos a la función recursiva aumentando el índice.
     }
+
+//5 Uso de reduce para obtener el género más común.
     
     getMostCommonGenre() {
-        //Uso de reduce
+       const genreCount = this.film.reduce((acc, film) => {
+           film.genre.ids.forEach(genre => {
+               acc[genre] = (acc[genre] || 0) + 1;
+           });
+           return acc;
+       }, {});
+        return Object.keys(genreCount).reduce((a, b) => genreCount[a] > genreCount[b] ? a:b);
     }
 
     getPopularFilmTitles() {
