@@ -75,9 +75,13 @@ class FilmList {
     sortFilmsByPopularity = () => {
         this.film.sort((a, b) => b.poularity - a.popularity); //Usamos sort para ordenar las películas de mayor a menor popularidad.
     }
+
+//4. Función recursiva para buscar una película por su ID.
     
     findFilmById() {
-        //Función recursiva
+        if (index >= this.fils.lenght) return null; //Recorremos el array y, si no encontramos la película, devolvemos null.
+        if (this.film[index]id === filmID) return this.film[index]; //Recorremos el array y, si encontramos la película, devolvemos el objeto de la película.
+        return this.findFilmById(filmID, index + a); //Llamamos a la función recursiva aumentando el índice.
     }
     
     getMostCommonGenre() {
