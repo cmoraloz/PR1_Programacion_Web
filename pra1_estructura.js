@@ -70,10 +70,10 @@ class FilmList {
         });
     }
 
-
+//3.3 Función flecha para ordenar películas por popularidad.
 
     sortFilmsByPopularity = () => {
-
+        this.film.sort((a, b) => b.poularity - a.popularity); //Usamos sort para ordenar las películas de mayor a menor popularidad.
     }
     
     findFilmById() {
