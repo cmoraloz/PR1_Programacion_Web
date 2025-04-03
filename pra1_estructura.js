@@ -100,10 +100,18 @@ class FilmList {
 
     getPopularFilmTitles() {
         return this.films
-        .filter(film => film.vote_average >= minVotes)
-        .map(film => film.title);
+        .filter(film => film.vote_average >= minVotes) //Filtramos las pelíulas que tengan una calificación mayor o igual a minVotes.
+        .map(film => film.title); //Usamos map para obtener sólo los título de las películas filtradas.
     }
 }
+
+//Pruebas de funcionamiento.
+
+//1. Creamos películas de ejemplo.
+const film1 = new Film(1, "Titanic", "Un romance trágico a bordo del barco Titanic", 98, "titanic.jpg", "1997-12-19", 7.8, 30000, [18, 10749]);
+const film2 = new Film(2, "El padrino", "La historia de una familia mafiosa y su lucha por el poder", 99, "godfather.jpg", "1972-03-24", 9.2, 40000, [18, 80]);
+const film3 = new Film(3, "El club de la lucha", "Un hombre se une a un club de lucha clandestino", 95, "fightclub.jpg", "1999-10-15", 8.8, 25000, [18, 53]);
+
 
 
 
