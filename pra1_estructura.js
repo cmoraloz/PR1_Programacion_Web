@@ -53,14 +53,24 @@ class FilmList {
         });
     }
 
-    addMultipleFilms = (...films) => {
+//3. Funciones flecha.
 
+//3.1. Función flecha para agregar varias películas a la lista.
+    
+    addMultipleFilms = (...films) => {
+        this.films.push(...films); //Añadimos todas las películas al array con el operador rest.
     }
     
-
+//3.2 Función flecha para filtrar películas por la fecha de lanzamiento.
+    
     getFilmsByDateRange = (startDate, endDate) => {
-
+        return this.film.filter(film => {
+            const release_date = new Date (film.release_date); //Convertimos la fecha en objeto Date.
+            return release_date >= new Date (starDate) && release_date <= new Date (endDate); //Comparamos las fechas y nos devuelve las películas que tengan la fecha de lanzamiento dentro del rango especificado.
+        });
     }
+
+
 
     sortFilmsByPopularity = () => {
 
