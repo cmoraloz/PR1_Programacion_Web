@@ -15,13 +15,77 @@ class Film {
         this.genre_ids = genre_ids;
     }
 
-    //Utilizamos Getters y setters para encapsular las propiedades. Esto nos permite controlar cómo se accede y modifica cada propiedad.
+    //Utilizamos Getters y setters para escapsular todas las propiedades, de uno en uno. Esto nos permite controlar cómo se accede y modifica cada propiedad.
+    get id() {
+        return this._id;
+    }
+
+    set id(value) {
+        this._id = value;
+    }
+
     get title() {
         return this._title;
     }
 
     set title(value) {
         this._title = value;
+    }
+
+    get overview() {
+        return this._overview;
+    }
+
+    set overview(value) {
+        this._overview = value;
+    }
+
+    get popularity() {
+        return this._popularity;
+    }
+
+    set popularity(value) {
+        this._popularity = value;
+    }
+
+    get poster_path() {
+        return this._poster_path;
+    }
+
+    set poster_path(value) {
+        this._poster_path = value;
+    }
+
+    get release_date() {
+        return this._release_date;
+    }
+
+    set release_date(value) {
+        this._release_date = value;
+    }
+
+    get vote_average() {
+        return this._vote_average;
+    }
+
+    set vote_average(value) {
+        this._vote_average = value;
+    }
+
+    get vote_count() {
+        return this._vote_count;
+    }
+
+    set vote_count(value) {
+        this._vote_count = value;
+    }
+
+    get genre_ids() {
+        return this._genre_ids;
+    }
+
+    set genre_ids(value) {
+        this._genre_ids = value;
     }
 }
 
